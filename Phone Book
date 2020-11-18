@@ -1,0 +1,11 @@
+function phoneBook(input) {
+    let phoneList = {};
+    input.forEach(element => {
+        let [name, phone] = element.split(` `);
+        phoneList[name] = phone;
+    })
+    let keys = Object.keys(phoneList);
+    for (let key of keys) {
+        console.log(`${key} -> ${phoneList[key]}`);
+    }
+}
